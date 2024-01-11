@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/header/Header';
 import Shop from './components/shop/Shop';
 import OrderReview from './components/orderReview/OrderReview';
@@ -8,7 +8,7 @@ import PlaceOrder from './components/placeOrder/PlaceOrder';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
         <Header/>
         <Routes>
            <Route path='/shop' element={<Shop/>}/>
@@ -16,7 +16,7 @@ function App() {
            <Route path='/inventory' element={<Inventory/>}/>
            <Route path='/placeOrder' element={<PlaceOrder/>}/>
         </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
